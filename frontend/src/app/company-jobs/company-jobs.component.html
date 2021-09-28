@@ -1,0 +1,19 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Role</th>
+          <th scope="col">Criteria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of jobs">
+          <td>{{ job.role }}</td>
+          <td>{{ job.criteria }}</td>
+          <button (click)="viewApplied(job.jobID)">View Applied Students</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

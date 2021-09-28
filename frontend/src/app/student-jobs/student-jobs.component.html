@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Criteria</th>
+            <th scope="col">Company</th>
+            <th scope="col">HR Name</th>
+            <th scope="col">HR Email</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let job of jobs">
+            <td>{{ job.role }}</td>
+            <td>{{ job.criteria }}</td>
+            <td>{{ job.hr.companyName }}</td>
+            <td>{{ job.hr.name }}</td>
+            <td><a href="mailto:{{ job.hr.email }}">{{ job.hr.email }}</a></td>
+            <button (click)="apply(job.jobID)">Apply</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

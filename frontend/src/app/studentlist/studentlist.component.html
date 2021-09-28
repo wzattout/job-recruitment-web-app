@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">University</th>
+            <th scope="col">Job</th>
+            <th scope="col">Company</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>{{ student.name }}</td>
+            <td><a href="mailto:{{ student.email }}">{{ student.email }}</a></td>
+            <td>{{ student.university }}</td>
+            <td>{{ student.acceptedJob.role }}</td>
+            <td>{{ student.acceptedJob.hr.companyName }}</td>
+            <button (click)="delete(student.id)">Delete student</button>
+          <button (click)="edit(student.id)">Edit student info</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

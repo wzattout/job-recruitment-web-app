@@ -1,0 +1,19 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #jobForm="ngForm">
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" [(ngModel)]="job.role" class="form-control" id="role" name="role"
+          placeholder="Enter your Job role" required #name="ngModel">
+      </div>
+      <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+      <div class="form-group">
+        <label for="criteria">Criteria</label>
+        <input type="text" [(ngModel)]="job.criteria" class="form-control" id="criteria" name="criteria"
+          placeholder="Enter your criteria" required #criteria="ngModel">
+        <div [hidden]="!criteria.pristine" class="alert alert-danger">Criteria is required</div>
+      </div>
+      <button type="submit" [disabled]="!jobForm.form.valid" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

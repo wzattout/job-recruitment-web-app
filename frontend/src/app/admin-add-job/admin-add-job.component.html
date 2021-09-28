@@ -1,0 +1,12 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #adminAddJobForm="ngForm">
+        <div class="form-group">
+          <label for="name">Company ID</label>
+          <input type="text" [(ngModel)]="ID" class="form-control" id="ID" name="ID"
+            placeholder="Enter Company ID" required #name="ngModel">
+        </div>
+        <button type="submit" [disabled]="!adminAddJobForm.form.valid" class="btn btn-info">Next</button>
+      </form>
+    </div>
+  </div>

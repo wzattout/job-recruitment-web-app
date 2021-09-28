@@ -1,0 +1,32 @@
+<button [routerLink]="''"> Logout</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card bg-dark my-5">
+                <div class="card-body">
+                    <ul class="text-center list-inline py-3">
+                        <li class="list-inline-item">
+                            <a routerLink="/companyRegister" class="btn btn-info">Add company</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/studentRegister" class="btn btn-info">Add student</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/adminAddJob" class="btn btn-info">Add job</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/companies" class="btn btn-info">View companies</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/students" class="btn btn-info">View students</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/jobs" class="btn btn-info">View jobs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
